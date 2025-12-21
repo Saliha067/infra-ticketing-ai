@@ -141,7 +141,7 @@ Shows:
 ## Project Structure
 
 ```
-kafka-learn/
+infra-ticketing-ai/
 ├── src/
 │   ├── agents/
 │   │   ├── supervisor.py       # Orchestration agent
