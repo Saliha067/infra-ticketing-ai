@@ -1,0 +1,37 @@
+[
+  {
+    "id": "kb_001",
+    "question": "How do I restart a Kubernetes pod?",
+    "answer": "To restart a Kubernetes pod, you can use: `kubectl rollout restart deployment/<deployment-name>` or delete the pod: `kubectl delete pod <pod-name>`. The deployment controller will automatically create a new pod.",
+    "tags": ["kubernetes", "pod", "restart"],
+    "team": "platform"
+  },
+  {
+    "id": "kb_002",
+    "question": "How to check disk space on production servers?",
+    "answer": "Use `df -h` to check disk space. For detailed directory usage: `du -sh /*`. Critical alert threshold is 85%. Contact DevOps if above 80%.",
+    "tags": ["linux", "disk", "monitoring"],
+    "team": "devops"
+  },
+  {
+    "id": "kb_003",
+    "question": "Database connection pool exhausted error",
+    "answer": "Check current connections: `SELECT count(*) FROM pg_stat_activity;`. Increase pool size in config or investigate connection leaks. Default pool size is 20. Recommended max: 100 for production.",
+    "tags": ["database", "postgresql", "connection"],
+    "team": "database"
+  },
+  {
+    "id": "kb_004",
+    "question": "How to scale application replicas?",
+    "answer": "For Kubernetes: `kubectl scale deployment/<name> --replicas=<number>`. For ECS: Update service desired count. For testing: start with 2x current load, monitor for 10 minutes.",
+    "tags": ["scaling", "kubernetes", "performance"],
+    "team": "platform"
+  },
+  {
+    "id": "kb_005",
+    "question": "SSL certificate expiring soon",
+    "answer": "Certificates are auto-renewed via cert-manager 30 days before expiry. To manually renew: `kubectl delete secret <tls-secret-name>` and cert-manager will re-issue. Verify with: `kubectl get certificate`.",
+    "tags": ["ssl", "security", "certificates"],
+    "team": "security"
+  }
+]

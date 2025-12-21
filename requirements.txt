@@ -1,0 +1,41 @@
+# Core Dependencies
+langchain==0.3.13
+langchain-ollama==0.2.2
+langchain-chroma==0.1.4
+langchain-community==0.3.13
+
+# Slack Integration
+slack-bolt==1.21.2
+slack-sdk==3.33.4
+
+# Vector Store & Embeddings
+chromadb==0.5.20
+sentence-transformers==3.3.1
+
+# Database
+sqlalchemy==2.0.36
+psycopg2-binary==2.9.10
+alembic==1.14.0
+
+# Cache
+redis==5.2.1
+hiredis==3.0.0
+
+# HTTP & API
+httpx==0.28.1
+requests==2.32.3
+
+# Environment & Config
+python-dotenv==1.0.1
+pydantic==2.10.4
+pydantic-settings==2.6.1
+
+# Utilities
+python-json-logger==3.2.1
+colorlog==6.9.0
+tenacity==9.0.0
+
+# Testing
+pytest==8.3.4
+pytest-asyncio==0.24.0
+pytest-mock==3.14.0
