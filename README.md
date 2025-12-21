@@ -158,8 +158,7 @@ infra-ticketing-ai/
 ├── config/
 │   ├── prompts.py              # Agent prompts
 │   └── knowledge_base.json     # Sample Q&As
-├── tests/
-│   └── test_system.py          # Integration tests
+├── test_setup.py               # Setup verification script
 ├── docker-compose.yml
 ├── metrics.py                  # Metrics CLI
 ├── .env
@@ -195,16 +194,16 @@ Adjust in `src/db/vector_store.py`:
 ## Testing
 
 ```bash
-pytest tests/ -v
+python test_setup.py
 ```
 
-**System Tests:**
+**Verification Tests:**
+- Ollama connection and LLM response
+- Redis connection and caching
+- PostgreSQL connection and queries
+- ChromaDB connection and vector store
 - Knowledge base search
-- KB resolution flow
-- Ticket creation flow
-- Agent classification
-- JIRA integration
-- Database persistence
+- Agent initialization
 
 ## Troubleshooting
 
